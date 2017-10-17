@@ -1,3 +1,7 @@
+	*{
+		padding: 0;
+		margin:0;
+	}
 	@-webkit-keyframes fanRotate{
 		0%{
 			-webkit-transform: rotateZ(0deg) translateZ(0px);
@@ -59,13 +63,13 @@
 			transform:translate3d(0,0,0px);			
 		}
 		25%{
-			transform:translate3d(0,-0.4em,0px);			
+			transform:translate3d(0,-10px,0px);			
 		}
 		50%{
 			transform:translate3d(0,0,0px);			
 		}
 		75%{
-			transform:translate3d(0,0.4em,0px);			
+			transform:translate3d(0,10px,0px);			
 		}
 		100%{
 			transform:translate3d(0,0,0px);			
@@ -126,15 +130,19 @@
 	@keyframes bus{
 		0%{
 			transform: translate3d(0,0,0);
+			
 		}		
 		25%{
-			transform: translate3d(0,0.2em,0);
+			transform:translate3d(0,6px,0);
+			/*transform: translate3d(0,0.3em,0);	*/
+			
 		}
 		50%{
 			transform: translate3d(0,0,0);
 		}
 		75%{
-			transform: translate3d(0,-0.2em,0);
+			transform:translate3d(0,-6px,0);			
+			/*transform: translate3d(0,-0.3em,0);*/
 		}
 		100%{
 			transform: translate3d(0,0,0);
@@ -569,7 +577,7 @@
 		width: 10em;
 		height: 10em;
 		font-family: "Microsoft Yahei";
-		background-color: lightblue;
+		background-color:lightblue;
 		border-radius: 1em;
 		-webkit-box-shadow: 0px 0px 1em #fff inset;
 		box-shadow: 0px 0px 1em #fff inset;
@@ -584,11 +592,11 @@
 		height: 6em;
 		background-size: 50% 50%;
 		background-repeat: no-repeat;
-		background-image: radial-gradient(#fff 30%,transparent 31%),/*头部	*/
+		background-image: radial-gradient(#fff 30%,transparent 32%),/*头部	*/
 		linear-gradient(205deg,lightblue 34% ,transparent 35%),/*机翼左 */		
 		linear-gradient(-12deg,transparent 40%, #fff 41%, #fff 51% ,transparent 52%),/*机翼左 */
 		linear-gradient(-20deg,transparent 40%, #fff 41%, #fff 49% ,transparent 50%),/*机翼左 */		
-		linear-gradient(0deg,lightblue 10%,transparent 11%), /*尾部	*/
+		linear-gradient(0deg,lightblue 11%,transparent 12%), /*尾部	*/
 		linear-gradient(10deg, transparent 43%, lightblue 44%),	/*尾部	*/
 		linear-gradient(302deg, lightblue 45%, #fff 46%, #fff 52%, transparent 53%),/*尾部	*/
 		linear-gradient(315deg, lightblue 43%, #fff 44%, #fff 50%, transparent 51%),/*尾部	*/		
@@ -704,17 +712,19 @@
 		top: 2.5em;
 		width: 7em;
 		height: 6em;
+		border: 1px solid lightblue;
 		border-radius: 0.5em;
-		background-repeat: no-repeat;
-		background-size: 7em 6em;
 		background-image: radial-gradient(circle at 20% 70%, #fff 10%,lightblue 11%,lightblue 12%,transparent 13%),
 		radial-gradient(circle at 80% 70%, #fff 10%,lightblue 11%,lightblue 12%,transparent 13%),
 		linear-gradient(0deg, lightblue 30%,transparent 30%,transparent 85%,#fff 85%,#fff 100%),
-        linear-gradient(90deg,transparent 40%, lightblue 40%, lightblue 42%, #fff 42%, #fff 60%, lightblue 60%,lightblue 62%, transparent 62%),
+        linear-gradient(90deg,transparent 40%, lightblue 40%, lightblue 42%, #fff 42%, #fff 60%, lightblue 60%,lightblue 62%, transparent 63%),
 		linear-gradient(0deg, transparent 30%,#fff 30%,#fff 50%, transparent 50%),
-		linear-gradient(90deg, #fff 10%,transparent 10%, transparent 20%,#fff 20%,#fff 22%,transparent 22%, transparent 32%,#fff 32%,#fff 40%,transparent 40%,transparent 62%,#fff 62%,#fff 67%,transparent 67%, transparent 77%,#fff 77%,#fff 80%,lightblue 80%, lightblue 99%,#fff 99%),
+		linear-gradient(90deg, #fff 10%,transparent 11%, transparent 20%,#fff 21%,#fff 22%,transparent 23%, transparent 32%,#fff 33%,#fff 41%,transparent 41%,transparent 62%,#fff 62%,#fff 67%,transparent 68%, transparent 77%,#fff 77%,#fff 80%,lightblue 81%, lightblue 99%,#fff 99%),
 		linear-gradient(0deg, #fff 55%,transparent 55%)
 		;
+
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
 		background-position: 0 0,0 0,0 0,0 1em,0 0,0 0,0 0;
 		animation: bus 1s linear infinite;
 	}
@@ -735,7 +745,7 @@
 		border-radius: 1em;
 		-webkit-box-shadow: 0px 0px 1em #fff inset;
 		box-shadow: 0px 0px 1em #fff inset;
-		perspective: 0px;
+
 	}
 	.vehicle-4:before{
 		content: '';
@@ -768,13 +778,13 @@
         radial-gradient(circle,#fff 0.21em,transparent 0.1em) ,/*烟*/
         radial-gradient(circle,#fff 0.23em,transparent 0.1em) ,/*烟*/       
 
-		linear-gradient(180deg,lightblue 2.1em,transparent 0em) ,
-		linear-gradient(90deg,lightblue 1.8em,transparent 1.8em,transparent 6.2em,lightblue 6.2em) ,
-		linear-gradient(90deg,lightblue 2.8em,transparent 2.8em,transparent 3.2em,lightblue 3.2em,lightblue 3.7em,transparent 3.7em,transparent 4.1em,lightblue 4.1em,lightblue 4.6em,transparent 4.6em,transparent 5em,lightblue 5em,lightblue 5.5em,transparent 5.5em,transparent 5.9em,lightblue 5.9em,lightblue 6.2em,transparent 6.2em,transparent 6.2em,lightblue 6.2em),
+		linear-gradient(180deg,lightblue 2.1em,transparent 2.2em) ,
+		linear-gradient(90deg,lightblue 1.8em,transparent 1.9em,transparent 6.3em,lightblue 6.3em) ,
+		linear-gradient(90deg,lightblue 2.8em,transparent 2.8em,transparent 3.2em,lightblue 3.2em,lightblue 3.6em,transparent 3.7em,transparent 4.1em,lightblue 4.1em,lightblue 4.5em,transparent 4.6em,transparent 5em,lightblue 5em,lightblue 5.4em,transparent 5.5em,transparent 5.9em,lightblue 5.9em,lightblue 6.2em,transparent 6.2em,transparent 6.2em,lightblue 6.2em),
 		linear-gradient(110deg,lightblue 1.0em,transparent 1.0em),		
-		linear-gradient(180deg,lightblue 2.5em,transparent 0.8em) ,
-		linear-gradient(80deg,lightblue 0.8em,#fff 0.85em,#fff 5em,transparent 5em),
-		linear-gradient(-80deg,lightblue 0.8em,#fff 0.85em,#fff 5em,transparent 5em)
+		linear-gradient(180deg,lightblue 2.5em,transparent 2.5em) ,
+		linear-gradient(80deg,lightblue 0.8em,#fff 0.85em,#fff 5em,transparent 5.1em),
+		linear-gradient(-80deg,lightblue 0.8em,#fff 0.85em,#fff 5em,transparent 5.1em)
 		;
 		background-repeat: no-repeat;
 		transform: scale(1.1);
@@ -787,3 +797,118 @@
 		text-align: center;
 		bottom: 0.5em;
 	}
+
+	.envelope{
+		position: relative;
+		width: 10em;
+		height: 10em;
+		font-family: "Microsoft Yahei";
+		background-color: lightblue;
+		border-radius: 1em;
+		-webkit-box-shadow: 0px 0px 1em #fff inset;
+		box-shadow: 0px 0px 1em #fff inset;
+		perspective: 0px;
+	}
+	.envelope:before{
+		content: '';
+		position: absolute;
+		left: 1.5em;
+		top: 1.5em;
+		width: 7em;
+		height: 6em;
+		border-radius: 0.8em;
+		background-image: linear-gradient(35deg, #fff 50%,transparent 51%,transparent 53%,#fff 54%),
+		linear-gradient(-35deg,#fff -1%, #fff 50%,transparent 51%,transparent 53%,#fff 54%);
+		background-size: 3.50em 100%;
+		background-repeat: no-repeat;
+		background-position: 0.03em 0,3.47em 0;
+		animation: bus 1s linear infinite;
+		filter: drop-shadow(0px 0px 10px #09f);
+	}
+	.envelope:after{
+		content: 'Email';
+		position: absolute;
+		bottom: 0.5em;
+		width: 100%;
+		text-align: center;
+	}
+
+	.garbage-can-1{
+		position: relative;
+		width: 10em;
+		height: 10em;
+		font-family: "Microsoft Yahei";
+		background-color: lightblue;
+		border-radius: 1em;
+		-webkit-box-shadow: 0px 0px 1em #fff inset;
+		box-shadow: 0px 0px 1em #fff inset;
+		perspective: 0px;
+	}
+	.garbage-can-1:before{
+		content: '';
+		position: absolute;
+		left: 3em;
+		top: 1.5em;
+		width: 4em;
+		height: 6em;
+		background: linear-gradient(90deg,transparent 20%,#fff 20%,#fff 30%,transparent 30%,transparent 40%,#fff 40%,#fff 50%,transparent 50%,transparent 60%,#fff 60%,#fff 70%,transparent 70%,transparent 80%,#fff 80%,#fff 90%,transparent 90%),
+		linear-gradient(90deg,transparent 20%,#fff 20%,#fff 30%,transparent 30%,transparent 40%,#fff 40%,#fff 50%,transparent 50%,transparent 60%,#fff 60%,#fff 70%,transparent 70%,transparent 80%,#fff 80%,#fff 90%,transparent 90%),
+		linear-gradient(90deg,#fff 10%,transparent 11%,transparent 90%,#fff 90%),
+		linear-gradient(90deg,#fff 10%,transparent 11%,transparent 90%,#fff 90%),		
+		linear-gradient(0deg,#fff 12%,transparent 12%),
+		linear-gradient(180deg,#fff 12%,transparent 12%),
+		linear-gradient(180deg,#fff 20%,transparent 10%),
+		linear-gradient(90deg, transparent 40%,#fff 40%,#fff 60%,transparent 60%);
+		background-size: 100% 50%;
+		background-repeat: no-repeat;
+		background-position: -0.2em 2.2em, -0.2em 2.2em, 0 95%,0 50%, 0 95%, 0 50%, 0 20%,0 -60%;
+		filter: drop-shadow(0px 0px 10px #89f);
+		animation: bus 1s linear infinite;
+	}
+	.garbage-can-1:after{
+		content: 'Garbage Can';
+		position: absolute;
+		bottom: 0.5em;
+		width: 100%;
+		text-align: center;
+	}
+
+	.garbage-can-2{
+		position: relative;
+		width: 10em;
+		height: 10em;
+		font-family: "Microsoft Yahei";
+		background-color: lightblue;
+		border-radius: 1em;
+		-webkit-box-shadow: 0px 0px 1em #fff inset;
+		box-shadow: 0px 0px 1em #fff inset;
+		perspective: 0px;
+	}
+	.garbage-can-2:before{
+		content: '';
+		position: absolute;
+		left: 3em;
+		top: 1em;
+		width: 4em;
+		height: 6em;
+		/*border: 1px solid;*/
+		background: linear-gradient(90deg,#fff 20%,transparent 21%,transparent 79%,#fff 80%),
+		linear-gradient(0deg,#fff 100%,transparent 100%),
+		linear-gradient(90deg,transparent 29%,#fff 30%,#fff 70%,transparent 71%),
+		linear-gradient(180deg,#fff 20%,transparent 21%);
+		background-size: 100% 50%;
+		background-repeat: no-repeat;
+		background-position:0 100%,0 70%, 0 180%,0 40%;
+		filter: drop-shadow(0px 0px 10px #89f);
+		animation: bus 1s linear infinite;		
+	}
+	.garbage-can-2:after{
+		content: 'Garbage Can';
+		position: absolute;
+		bottom: 0.5em;
+		width: 100%;
+		text-align: center;
+	}
+
+
+	
