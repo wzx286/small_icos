@@ -559,8 +559,8 @@
 		height: 6em;
 		border-radius: 50%;
 		background-color: rgba(60,255,255,1);
-		background-image: radial-gradient(circle at 50% 50%, lightblue 40%,lightblue 50%, transparent 51%,transparent 69%,lightblue 70%),
-		radial-gradient(circle at 0em 8em, lightblue 50%, transparent 31%),	
+		background-image: radial-gradient(circle at 50% 50%, lightblue 48%, transparent 51%,transparent 69%,lightblue 70%),
+		radial-gradient(circle at 0em 8em, lightblue 49%, transparent 50%),	
 		linear-gradient(90deg, lightblue 0%, rgba(255,255,255,1) 100%);
 		animation: fanRotate 1s infinite;
 	}
